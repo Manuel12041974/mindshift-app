@@ -1,0 +1,81 @@
+/* ══════════════════════════════════════════════════════════════
+   MindShift — Dark Mode
+   Auto-detects system preference, toggleable via header button
+   ══════════════════════════════════════════════════════════════ */
+
+[data-theme="dark"] {
+  --bg: #0F0D1A;
+  --bg-card: #1A1726;
+  --bg-card-hover: #211E30;
+  --bg-hero: linear-gradient(135deg, #312E81 0%, #4338CA 40%, #4F46E5 100%);
+  --text-primary: #E0E7FF;
+  --text-secondary: #A5B4FC;
+  --text-muted: #6366F1;
+  --border: #2D2A3E;
+  --border-light: #1E1B30;
+  --accent: #818CF8;
+  --accent-light: rgba(99, 102, 241, 0.15);
+  --accent-glow: rgba(129, 140, 248, 0.2);
+  --success: #34D399;
+  --success-bg: rgba(52, 211, 153, 0.15);
+  --warning: #FBBF24;
+  --warning-bg: rgba(251, 191, 36, 0.15);
+  --danger: #FB7185;
+  --danger-bg: rgba(251, 113, 133, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 20px rgba(129, 140, 248, 0.2);
+}
+
+[data-theme="dark"] .header {
+  background: rgba(15, 13, 26, 0.85);
+}
+
+[data-theme="dark"] .nav {
+  background: rgba(26, 23, 38, 0.92);
+  border-top-color: var(--border);
+}
+
+[data-theme="dark"] .compassion {
+  background: linear-gradient(135deg, #2D1A1E, #3B1C25);
+}
+[data-theme="dark"] .compassion-label { color: #FB7185; }
+[data-theme="dark"] .compassion-text { color: #FCA5A5; }
+
+[data-theme="dark"] .recovery-card {
+  background: linear-gradient(135deg, #2D2410, #3B2D0A);
+}
+[data-theme="dark"] .recovery-label { color: #FBBF24; }
+[data-theme="dark"] .recovery-text { color: #FDE68A; }
+
+[data-theme="dark"] .mindful-card {
+  background: linear-gradient(135deg, #0D2818, #0A3520);
+}
+[data-theme="dark"] .mindful-title { color: #34D399; }
+[data-theme="dark"] .mindful-duration { color: #6EE7B7; }
+[data-theme="dark"] .mindful-instruction { color: #A7F3D0; }
+
+[data-theme="dark"] .weekly-card {
+  background: linear-gradient(135deg, #1E1B3A, #252240);
+}
+[data-theme="dark"] .weekly-label { color: #A5B4FC; }
+[data-theme="dark"] .weekly-textarea {
+  border-color: #3730A3; background: #1A1726;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .celebration {
+  background: rgba(15, 13, 26, 0.95);
+}
+
+[data-theme="dark"] .stat { box-shadow: none; }
+[data-theme="dark"] .stat:nth-child(1) { background: rgba(251, 191, 36, 0.1); }
+[data-theme="dark"] .stat:nth-child(2) { background: rgba(99, 102, 241, 0.1); }
+[data-theme="dark"] .stat:nth-child(3) { background: rgba(52, 211, 153, 0.1); }
+
+[data-theme="dark"] .onboarding { background: var(--bg); }
+[data-theme="dark"] .onboarding-option { background: var(--bg-card); border-color: var(--border); }
+[data-theme="dark"] .onboarding-option.selected { border-color: var(--accent); background: var(--accent-light); }
+
+[data-theme="dark"] .coach-msg { background: rgba(99, 102, 241, 0.1); }

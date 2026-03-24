@@ -1,0 +1,145 @@
+/* ══════════════════════════════════════════════════════════════
+   MindShift — Animations & Micro-interactions
+   Spring physics, page transitions, celebration effects
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Page Transitions ─────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.content > * { animation: fadeSlideUp 0.35s ease-out both; }
+.content > *:nth-child(1) { animation-delay: 0ms; }
+.content > *:nth-child(2) { animation-delay: 40ms; }
+.content > *:nth-child(3) { animation-delay: 80ms; }
+.content > *:nth-child(4) { animation-delay: 120ms; }
+.content > *:nth-child(5) { animation-delay: 160ms; }
+.content > *:nth-child(6) { animation-delay: 200ms; }
+.content > *:nth-child(7) { animation-delay: 240ms; }
+.content > *:nth-child(8) { animation-delay: 280ms; }
+
+/* ── Checkbox Animation ───────────────────────────────────── */
+@keyframes checkPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.25); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1.05); }
+}
+.checkbox.just-checked {
+  animation: checkPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes checkDraw {
+  from { stroke-dashoffset: 16; }
+  to { stroke-dashoffset: 0; }
+}
+.checkbox.just-checked svg path {
+  stroke-dasharray: 16;
+  animation: checkDraw 0.3s ease 0.1s both;
+}
+
+/* ── Streak Fire Animation ────────────────────────────────── */
+@keyframes fireGlow {
+  0%, 100% { filter: brightness(1); transform: scale(1); }
+  50% { filter: brightness(1.3); transform: scale(1.08); }
+}
+.streak-fire { animation: fireGlow 2s ease-in-out infinite; display: inline-block; }
+
+/* ── Celebration ──────────────────────────────────────────── */
+@keyframes celebrationZoom {
+  0% { opacity: 0; transform: scale(0.5); }
+  60% { transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes celebrationBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.celebration { animation: fadeIn 0.3s ease; }
+.celebration-inner { animation: celebrationZoom 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.celebration-emoji { animation: celebrationBounce 1s ease-in-out infinite 0.5s; }
+
+/* ── Progress Bar Pulse ───────────────────────────────────── */
+@keyframes progressPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+.progress-fill.complete {
+  animation: progressPulse 2s ease-in-out 3;
+}
+
+/* ── Card Entry ───────────────────────────────────────────── */
+@keyframes cardSlideIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Onboarding Transitions ───────────────────────────────── */
+@keyframes onboardSlide {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.onboarding-content { animation: onboardSlide 0.4s ease-out; }
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+.onboarding-dot.active { animation: dotPulse 0.4s ease; }
+
+/* ── Ripple Effect ────────────────────────────────────────── */
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+.ripple-effect {
+  position: absolute; border-radius: 50%; background: rgba(99, 102, 241, 0.15);
+  transform: scale(0); animation: ripple 0.5s ease-out;
+  pointer-events: none;
+}
+
+/* ── Shake (for errors) ───────────────────────────────────── */
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+.shake { animation: shake 0.5s ease-in-out; }
+
+/* ── Skeleton Loading ─────────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--border-light) 25%, var(--border) 50%, var(--border-light) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* ── Reduced Motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
