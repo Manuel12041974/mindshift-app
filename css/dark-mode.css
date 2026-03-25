@@ -79,3 +79,201 @@
 [data-theme="dark"] .onboarding-option.selected { border-color: var(--accent); background: var(--accent-light); }
 
 [data-theme="dark"] .coach-msg { background: rgba(99, 102, 241, 0.1); }
+
+/* ── Physiotherapy Dark Mode ────────────────────────────── */
+[data-theme="dark"] .physio-program,
+[data-theme="dark"] .pain-card,
+[data-theme="dark"] .physio-timeline {
+  background: var(--bg-card);
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .physio-program-title,
+[data-theme="dark"] .pain-title,
+[data-theme="dark"] .physio-timeline-title,
+[data-theme="dark"] .exercise-name { color: var(--text-primary); }
+
+[data-theme="dark"] .physio-start-btn {
+  background: linear-gradient(135deg, #6366F1, #818CF8);
+}
+
+[data-theme="dark"] .pain-slider {
+  background: linear-gradient(90deg, #065F46 0%, #92400E 50%, #991B1B 100%);
+}
+
+[data-theme="dark"] .pain-value.low { color: #34D399; }
+[data-theme="dark"] .pain-value.mid { color: #FBBF24; }
+[data-theme="dark"] .pain-value.high { color: #FB7185; }
+
+[data-theme="dark"] .physio-session {
+  background: var(--bg);
+}
+
+[data-theme="dark"] .exercise-card {
+  background: var(--bg-card);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .exercise-breathing {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34D399;
+}
+
+[data-theme="dark"] .timer-circle { border-color: var(--border); }
+[data-theme="dark"] .timer-circle.active { border-color: #818CF8; box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15); }
+[data-theme="dark"] .timer-circle.rest { border-color: #34D399; box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.15); }
+
+[data-theme="dark"] .library-exercise-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .library-filter-btn {
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .library-filter-btn.active {
+  border-color: #818CF8;
+  background: rgba(99, 102, 241, 0.15);
+  color: #A5B4FC;
+}
+
+[data-theme="dark"] .physio-subnav-btn {
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .physio-subnav-btn.active {
+  border-color: #818CF8;
+  background: rgba(99, 102, 241, 0.15);
+  color: #A5B4FC;
+}
+
+[data-theme="dark"] .phase-advance-content {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .pain-delta.improved { color: #34D399; }
+[data-theme="dark"] .pain-delta.worse { color: #FB7185; }
+
+[data-theme="dark"] .session-btn.secondary {
+  background: var(--border);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .physio-coach-msg {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(124, 58, 237, 0.1));
+  border-left-color: #818CF8;
+}
+
+[data-theme="dark"] .difficulty-dot.filled { background: #818CF8; }
+
+/* Dark SVG animations */
+[data-theme="dark"] .physio-anim circle[fill="#4F46E5"] { fill: #818CF8; }
+[data-theme="dark"] .physio-anim line[stroke="#4F46E5"] { stroke: #818CF8; }
+[data-theme="dark"] .physio-anim circle[fill="#6366F1"] { fill: #A5B4FC; }
+[data-theme="dark"] .physio-anim line[stroke="#6366F1"] { stroke: #A5B4FC; }
+[data-theme="dark"] .physio-anim rect[fill="#E0E7FF"] { fill: #2D2A3E; }
+[data-theme="dark"] .physio-anim rect[fill="#EEF2FF"] { fill: #1E1B30; }
+[data-theme="dark"] .physio-anim text[fill="#6B7280"] { fill: #9CA3AF; }
+[data-theme="dark"] .physio-anim rect[fill="#F3F4F6"] { fill: #1A1726; }
+
+/* ── Fasting Dark Mode ───────────────────────────────────── */
+[data-theme="dark"] .fasting-timer-svg text { fill: var(--text-primary); }
+[data-theme="dark"] .fasting-timer-svg circle[stroke="#E5E7EB"] { stroke: #2D2A3E; }
+
+[data-theme="dark"] .phase-info-card {
+  background: var(--bg-card);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .protocol-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .protocol-card.selected {
+  border-color: #818CF8;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+[data-theme="dark"] .protocol-card.recommended::after { background: #818CF8; }
+
+[data-theme="dark"] .protocol-diff-dot { background: #3B3852; }
+[data-theme="dark"] .protocol-diff-dot.filled { background: #818CF8; }
+
+[data-theme="dark"] .eating-window-container {
+  background: var(--bg-card);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .fasting-stat-card {
+  background: var(--bg-card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+[data-theme="dark"] .fasting-stat-value { color: #A5B4FC; }
+
+[data-theme="dark"] .fasting-calendar { background: var(--bg-card); }
+[data-theme="dark"] .calendar-day.completed { background: #065F46; color: #34D399; }
+[data-theme="dark"] .calendar-day.partial { background: #78350F; color: #FBBF24; }
+[data-theme="dark"] .calendar-day.today { border-color: #818CF8; }
+
+[data-theme="dark"] .phase-segment { opacity: 0.9; }
+[data-theme="dark"] .contra-item { border-color: var(--border); }
+
+/* ── Movement & Exercise Dark Mode ───────────────────────── */
+[data-theme="dark"] .activity-ring-svg circle[stroke="#E5E7EB"] { stroke: #2D2A3E; }
+[data-theme="dark"] .widget-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+[data-theme="dark"] .exercise-log-card,
+[data-theme="dark"] .exercise-weekly-card,
+[data-theme="dark"] .weight-card,
+[data-theme="dark"] .movement-widget {
+  background: var(--bg-card);
+  border-color: var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+[data-theme="dark"] .exercise-type-btn {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .exercise-type-btn.selected {
+  border-color: #818CF8;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+[data-theme="dark"] .weight-input {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .weight-input:focus { border-color: #818CF8; }
+
+[data-theme="dark"] .weight-delta.down { background: #065F46; color: #34D399; }
+[data-theme="dark"] .weight-delta.up { background: #7F1D1D; color: #FCA5A5; }
+
+/* ── Profile Dark Mode ───────────────────────────────────── */
+[data-theme="dark"] .profile-menu-item {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .profile-menu-item:active {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+[data-theme="dark"] .profile-menu-icon { background: rgba(99, 102, 241, 0.15); }
+
+/* ── SVG Chart Dark Mode ─────────────────────────────────── */
+[data-theme="dark"] .fasting-timer-svg text[fill="#9CA3AF"] { fill: #6B7280; }
+[data-theme="dark"] .weight-chart-container text { fill: #9CA3AF; }
+[data-theme="dark"] .weight-chart-container line[stroke="#E5E7EB"] { stroke: #2D2A3E; }

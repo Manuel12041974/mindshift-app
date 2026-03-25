@@ -1,0 +1,460 @@
+/* ══════════════════════════════════════════════════════════════
+   MindShift — Movement & Exercise Module Styles
+   Activity rings, break cards, exercise logging
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Activity Ring ───────────────────────────────────────── */
+
+.activity-ring-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-ring-container {
+  width: 120px;
+  height: 120px;
+}
+
+.activity-ring-container.mini {
+  width: 60px;
+  height: 60px;
+}
+
+.activity-ring-progress {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.activity-ring-label {
+  font-size: 12px;
+  color: var(--text-secondary, #6B7280);
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* ── Movement Dashboard Widget ───────────────────────────── */
+
+.movement-widget {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--border, #E5E7EB);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.movement-widget-info {
+  flex: 1;
+}
+
+.movement-widget-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text, #111827);
+  margin-bottom: 4px;
+}
+
+.movement-widget-sub {
+  font-size: 12px;
+  color: var(--text-secondary, #6B7280);
+}
+
+.movement-widget-countdown {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4F46E5;
+  margin-top: 4px;
+}
+
+/* ── Break Card ──────────────────────────────────────────── */
+
+.break-card {
+  background: linear-gradient(135deg, #EEF2FF, #F5F3FF);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 12px 0;
+  border-left: 4px solid #4F46E5;
+}
+
+[data-theme="dark"] .break-card {
+  background: linear-gradient(135deg, #1E1B30, #2D2640);
+}
+
+.break-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text, #111827);
+  margin-bottom: 4px;
+}
+
+.break-card-desc {
+  font-size: 12px;
+  color: var(--text-secondary, #6B7280);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.break-card-science {
+  font-size: 10px;
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+.break-card-btn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #4F46E5;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  width: 100%;
+}
+
+.break-card-btn:active { transform: scale(0.97); }
+
+/* ── Exercise Log ────────────────────────────────────────── */
+
+.exercise-log-card {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--border, #E5E7EB);
+  margin: 12px 0;
+}
+
+.exercise-log-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text, #111827);
+  margin-bottom: 12px;
+}
+
+.exercise-type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.exercise-type-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  border: 2px solid var(--border, #E5E7EB);
+  border-radius: 12px;
+  background: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.15s;
+}
+
+.exercise-type-btn.selected {
+  border-color: #4F46E5;
+  background: #EEF2FF;
+}
+
+.exercise-type-btn:active { transform: scale(0.95); }
+
+.exercise-type-icon {
+  font-size: 20px;
+}
+
+.exercise-type-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text, #111827);
+}
+
+/* ── Exercise Timer ──────────────────────────────────────── */
+
+.exercise-timer-display {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.exercise-timer-value {
+  font-family: 'Fraunces', serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--text, #111827);
+}
+
+.exercise-timer-label {
+  font-size: 13px;
+  color: var(--text-secondary, #6B7280);
+  margin-top: 4px;
+}
+
+.exercise-timer-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.exercise-timer-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+.exercise-timer-btn.start {
+  background: linear-gradient(135deg, #10B981, #34D399);
+  color: #fff;
+}
+
+.exercise-timer-btn.stop {
+  background: linear-gradient(135deg, #EF4444, #F87171);
+  color: #fff;
+}
+
+/* ── Weekly Exercise Chart ───────────────────────────────── */
+
+.exercise-weekly-card {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--border, #E5E7EB);
+  margin: 12px 0;
+}
+
+.exercise-weekly-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.exercise-weekly-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text, #111827);
+}
+
+.exercise-weekly-total {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.exercise-weekly-total.on-track { color: #10B981; }
+.exercise-weekly-total.behind { color: #F59E0B; }
+
+/* ── Weight Tracking ─────────────────────────────────────── */
+
+.weight-card {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--border, #E5E7EB);
+  margin: 12px 0;
+}
+
+.weight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.weight-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text, #111827);
+}
+
+.weight-current {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #4F46E5;
+}
+
+.weight-delta {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.weight-delta.down { background: #D1FAE5; color: #059669; }
+.weight-delta.up { background: #FEE2E2; color: #EF4444; }
+.weight-delta.same { background: #F3F4F6; color: #6B7280; }
+
+.weight-input-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.weight-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid var(--border, #E5E7EB);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--card-bg, #fff);
+  color: var(--text, #111827);
+}
+
+.weight-input:focus {
+  border-color: #4F46E5;
+  outline: none;
+}
+
+.weight-save-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #4F46E5;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+.weight-chart-container {
+  margin-top: 12px;
+  height: 140px;
+}
+
+/* ── Notification Permission ─────────────────────────────── */
+
+.notification-card {
+  background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+  border-radius: 14px;
+  padding: 14px;
+  margin: 12px 0;
+  border-left: 4px solid #F59E0B;
+}
+
+[data-theme="dark"] .notification-card {
+  background: linear-gradient(135deg, #2D2410, #3B2D0A);
+}
+
+.notification-card p {
+  font-size: 13px;
+  color: var(--text, #111827);
+  margin: 0 0 10px;
+}
+
+.notification-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #F59E0B;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+/* ── Dashboard Widgets (compact) ─────────────────────────── */
+
+.widget-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.widget-card {
+  flex: 1;
+  background: var(--card-bg, #fff);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--border, #E5E7EB);
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.widget-card:active { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+
+.widget-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary, #6B7280);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.widget-value {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text, #111827);
+}
+
+.widget-sub {
+  font-size: 11px;
+  color: var(--text-secondary, #6B7280);
+  margin-top: 2px;
+}
+
+/* ── Profile Menu ────────────────────────────────────────── */
+
+.profile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border, #E5E7EB);
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.profile-menu-item:active {
+  background: #EEF2FF;
+}
+
+.profile-menu-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #EEF2FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-menu-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text, #111827);
+}
+
+.profile-menu-chevron {
+  margin-left: auto;
+  color: #9CA3AF;
+}

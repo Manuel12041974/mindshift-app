@@ -3,19 +3,30 @@
 // Enables offline functionality for PWA
 // ══════════════════════════════════════════════════════════════
 
-const CACHE_NAME = 'mindshift-v2';
+const CACHE_NAME = 'mindshift-v4';
 const ASSETS = [
   '/',
   '/index.html',
   '/css/styles.css',
+  '/css/fasting.css',
+  '/css/movement.css',
   '/css/dark-mode.css',
   '/css/animations.css',
+  '/css/physio.css',
   '/js/app.js',
   '/js/habits.js',
   '/js/celebrations.js',
   '/js/charts.js',
   '/js/icons.js',
   '/js/ai-coach.js',
+  '/js/physio.js',
+  '/js/physio-svg.js',
+  '/js/physio-coach.js',
+  '/js/fasting.js',
+  '/js/fasting-svg.js',
+  '/js/movement.js',
+  '/js/movement-svg.js',
+  '/js/config.js',
   '/manifest.json'
 ];
 

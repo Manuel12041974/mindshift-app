@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mindshift",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3456", "-s", "C:/Users/moliveira/Desktop/mindshift-app"],
+      "port": 3456
+    }
+  ]
+}

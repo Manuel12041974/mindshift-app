@@ -1,0 +1,30 @@
+{
+  "brand": {
+    "name": "MindShift",
+    "tagline": "Mudanca baseada em evidencia",
+    "logo": null
+  },
+  "theme": {
+    "primary": "#4F46E5",
+    "primaryLight": "#E0E7FF",
+    "accent": "#818CF8",
+    "success": "#059669",
+    "warning": "#D97706",
+    "danger": "#E11D48",
+    "fontHeading": "Fraunces",
+    "fontBody": "DM Sans",
+    "borderRadius": "14px"
+  },
+  "features": {
+    "habits": true,
+    "fasting": true,
+    "physio": true,
+    "movement": true,
+    "exercise": true,
+    "coach": true,
+    "journal": true,
+    "science": true
+  },
+  "goals": ["weight", "water", "vegan", "spine"],
+  "lang": "pt"
+}

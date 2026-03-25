@@ -1,0 +1,1175 @@
+/* ══════════════════════════════════════════════════════════════
+   MindShift — Physiotherapy Module Styles
+   Premium UI for exercise sessions, pain tracking, body map
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Phase Hero Card ─────────────────────────────────────── */
+
+.physio-hero {
+  background: linear-gradient(135deg, var(--accent, #4F46E5) 0%, #7C3AED 100%);
+  border-radius: 18px;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.physio-hero-phase {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.physio-hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.physio-hero-desc {
+  font-size: 13px;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.physio-hero-progress {
+  height: 6px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.physio-hero-progress-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.physio-hero-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* ── Daily Program Card ──────────────────────────────────── */
+
+.physio-program {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+  border: 1px solid var(--border, #E5E7EB);
+}
+
+.physio-program-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.physio-program-title {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text, #111827);
+}
+
+.physio-program-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #F0FDF4;
+  color: #059669;
+}
+
+.physio-program-badge.done {
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+.physio-program-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.physio-program-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary, #6B7280);
+}
+
+.physio-program-stat strong {
+  color: var(--text, #111827);
+}
+
+.physio-start-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4F46E5, #6366F1);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.physio-start-btn:active {
+  transform: scale(0.97);
+}
+
+.physio-start-btn:disabled {
+  background: #D1D5DB;
+  cursor: not-allowed;
+}
+
+/* ── Pain Slider ─────────────────────────────────────────── */
+
+.pain-card {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+  border: 1px solid var(--border, #E5E7EB);
+}
+
+.pain-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text, #111827);
+}
+
+.pain-slider-wrap {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.pain-slider {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(90deg, #10B981 0%, #F59E0B 50%, #EF4444 100%);
+  border-radius: 4px;
+  outline: none;
+}
+
+.pain-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: 3px solid #4F46E5;
+  cursor: pointer;
+}
+
+.pain-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: 3px solid #4F46E5;
+  cursor: pointer;
+}
+
+.pain-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--text-secondary, #6B7280);
+  margin-top: 4px;
+}
+
+.pain-value {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 8px 0;
+  font-family: 'Fraunces', serif;
+}
+
+.pain-value.low { color: #10B981; }
+.pain-value.mid { color: #F59E0B; }
+.pain-value.high { color: #EF4444; }
+
+.pain-faces {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 0 4px;
+  margin-bottom: 4px;
+}
+
+/* ── Pain Chart ──────────────────────────────────────────── */
+
+.pain-chart {
+  margin-bottom: 16px;
+}
+
+.pain-chart-bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4px;
+  height: 80px;
+  padding: 0 4px;
+}
+
+.pain-chart-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 2px;
+}
+
+.pain-chart-bar-wrap {
+  width: 100%;
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: flex-end;
+  height: 60px;
+}
+
+.pain-chart-bar {
+  width: 8px;
+  border-radius: 3px 3px 0 0;
+  min-height: 2px;
+  transition: height 0.3s ease;
+}
+
+.pain-chart-bar.pre { opacity: 0.5; }
+.pain-chart-bar.post { opacity: 1; }
+
+.pain-chart-label {
+  font-size: 9px;
+  color: var(--text-secondary, #6B7280);
+}
+
+.pain-chart-label.today {
+  font-weight: 700;
+  color: var(--accent, #4F46E5);
+}
+
+/* ── Phase Timeline ──────────────────────────────────────── */
+
+.physio-timeline {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+  border: 1px solid var(--border, #E5E7EB);
+}
+
+.physio-timeline-title {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text, #111827);
+}
+
+.physio-phase-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  position: relative;
+}
+
+.physio-phase-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 36px;
+  bottom: -4px;
+  width: 2px;
+  background: #E5E7EB;
+}
+
+.physio-phase-item.active::after {
+  background: var(--accent, #4F46E5);
+}
+
+.physio-phase-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.physio-phase-dot.completed {
+  background: #10B981;
+}
+
+.physio-phase-dot.active {
+  background: var(--accent, #4F46E5);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+}
+
+.physio-phase-dot.locked {
+  background: #D1D5DB;
+}
+
+.physio-phase-info h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text, #111827);
+  margin: 0 0 2px;
+}
+
+.physio-phase-info p {
+  font-size: 12px;
+  color: var(--text-secondary, #6B7280);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Session UI ──────────────────────────────────────────── */
+
+.physio-session {
+  position: fixed;
+  inset: 0;
+  background: var(--bg, #F8F9FC);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0));
+}
+
+.session-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.session-close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary, #6B7280);
+  padding: 8px;
+}
+
+.session-progress {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary, #6B7280);
+}
+
+.session-progress-bar {
+  height: 4px;
+  background: var(--border, #E5E7EB);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.session-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4F46E5, #6366F1);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* ── Exercise Card (in session) ──────────────────────────── */
+
+.exercise-card {
+  background: var(--card-bg, #fff);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.exercise-anim-container {
+  background: #F8F9FC;
+  border-radius: 14px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .exercise-anim-container {
+  background: #1A1625;
+}
+
+.exercise-anim-container .physio-anim {
+  max-height: 160px;
+  padding: 10px;
+}
+
+.exercise-play-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(79, 70, 229, 0.9);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.exercise-name {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text, #111827);
+  margin-bottom: 4px;
+}
+
+.exercise-muscles {
+  font-size: 12px;
+  color: var(--text-secondary, #6B7280);
+  margin-bottom: 12px;
+}
+
+.exercise-counter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.exercise-counter-item {
+  background: #EEF2FF;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4F46E5;
+}
+
+[data-theme="dark"] .exercise-counter-item {
+  background: #2D2640;
+}
+
+.exercise-breathing {
+  font-size: 13px;
+  color: #10B981;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  background: #F0FDF4;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  animation: breathePulse 4s ease-in-out infinite;
+}
+
+[data-theme="dark"] .exercise-breathing {
+  background: #162016;
+}
+
+@keyframes breathePulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.exercise-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.exercise-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 12px;
+  color: var(--text-secondary, #6B7280);
+  line-height: 1.4;
+}
+
+.exercise-steps li .step-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #EEF2FF;
+  color: #4F46E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Timer ────────────────────────────────────────────────── */
+
+.session-timer {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.timer-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #EEF2FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.timer-circle.active {
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+.timer-circle.rest {
+  border-color: #10B981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+}
+
+.timer-value {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text, #111827);
+}
+
+.timer-label {
+  font-size: 12px;
+  color: var(--text-secondary, #6B7280);
+}
+
+/* ── Session Buttons ─────────────────────────────────────── */
+
+.session-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.session-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.session-btn:active { transform: scale(0.96); }
+
+.session-btn.primary {
+  background: linear-gradient(135deg, #4F46E5, #6366F1);
+  color: #fff;
+}
+
+.session-btn.secondary {
+  background: var(--border, #E5E7EB);
+  color: var(--text-secondary, #6B7280);
+}
+
+.session-btn.skip {
+  background: none;
+  color: var(--text-secondary, #6B7280);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ── Rest Screen ─────────────────────────────────────────── */
+
+.rest-screen {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.rest-title {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text, #111827);
+  margin-bottom: 8px;
+}
+
+.rest-next {
+  font-size: 13px;
+  color: var(--text-secondary, #6B7280);
+  margin-top: 12px;
+}
+
+/* ── Session Complete ────────────────────────────────────── */
+
+.session-complete {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.session-complete-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.session-complete-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text, #111827);
+  margin-bottom: 8px;
+}
+
+.session-complete-sub {
+  font-size: 14px;
+  color: var(--text-secondary, #6B7280);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.session-stats {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.session-stat {
+  background: #EEF2FF;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+[data-theme="dark"] .session-stat {
+  background: #2D2640;
+}
+
+.session-stat-value {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #4F46E5;
+}
+
+.session-stat-label {
+  font-size: 11px;
+  color: var(--text-secondary, #6B7280);
+}
+
+.pain-delta {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.pain-delta.improved { color: #10B981; }
+.pain-delta.same { color: #6B7280; }
+.pain-delta.worse { color: #EF4444; }
+
+/* ── Exercise Library ────────────────────────────────────── */
+
+.library-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.library-filter-btn {
+  padding: 6px 14px;
+  border: 2px solid var(--border, #E5E7EB);
+  border-radius: 20px;
+  background: none;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-secondary, #6B7280);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.library-filter-btn.active {
+  border-color: #4F46E5;
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+.library-exercise-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  background: var(--card-bg, #fff);
+  border-radius: 14px;
+  border: 1px solid var(--border, #E5E7EB);
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.library-exercise-card:active {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.library-exercise-card.locked {
+  opacity: 0.5;
+}
+
+.library-exercise-preview {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: #F3F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .library-exercise-preview {
+  background: #1A1625;
+}
+
+.library-exercise-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.library-exercise-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text, #111827);
+  margin-bottom: 2px;
+}
+
+.library-exercise-meta {
+  font-size: 11px;
+  color: var(--text-secondary, #6B7280);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.library-exercise-difficulty {
+  display: flex;
+  gap: 2px;
+}
+
+.difficulty-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #D1D5DB;
+}
+
+.difficulty-dot.filled {
+  background: #4F46E5;
+}
+
+.library-lock-icon {
+  color: #9CA3AF;
+  font-size: 16px;
+}
+
+/* ── Body Map ────────────────────────────────────────────── */
+
+.body-map-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.body-map .bm-zone {
+  transition: fill 0.3s ease;
+}
+
+.body-map .bm-zone:hover,
+.body-map .bm-zone.selected {
+  stroke: #4F46E5;
+  stroke-width: 2;
+}
+
+/* ── Physio Sub-nav ──────────────────────────────────────── */
+
+.physio-subnav {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.physio-subnav-btn {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid var(--border, #E5E7EB);
+  border-radius: 10px;
+  background: none;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-secondary, #6B7280);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.physio-subnav-btn.active {
+  border-color: #4F46E5;
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+/* ── SVG Animation States ────────────────────────────────── */
+
+.physio-anim.paused * {
+  animation-play-state: paused !important;
+}
+
+/* Phase I Animations */
+.prone-breathe {
+  animation: proneBreath 4s ease-in-out infinite;
+}
+
+@keyframes proneBreath {
+  0%, 100% { r: 5; opacity: 0.3; }
+  50% { r: 8; opacity: 0.5; }
+}
+
+.mpu-body {
+  animation: mpuPress 4s ease-in-out infinite;
+}
+
+@keyframes mpuPress {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(-25deg); }
+}
+
+.mpu-arrow {
+  animation: arrowPulse 4s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+  0%, 100% { opacity: 0; }
+  25%, 75% { opacity: 1; }
+}
+
+.se-upper {
+  animation: standExt 4s ease-in-out infinite;
+}
+
+@keyframes standExt {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(-20deg); }
+}
+
+.ah-belly {
+  animation: hollowBelly 4s ease-in-out infinite;
+}
+
+@keyframes hollowBelly {
+  0%, 100% { rx: 15; ry: 8; }
+  40%, 60% { rx: 10; ry: 5; }
+}
+
+.ss-leg {
+  animation: sciaticSlide 5s ease-in-out infinite;
+}
+
+@keyframes sciaticSlide {
+  0%, 100% { transform: rotate(0deg); }
+  30%, 70% { transform: rotate(-40deg); }
+}
+
+/* Phase II Animations */
+.mcu-upper {
+  animation: curlUp 4s ease-in-out infinite;
+}
+
+@keyframes curlUp {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(-12deg); }
+}
+
+.sp-body {
+  animation: sidePlank 5s ease-in-out infinite;
+}
+
+@keyframes sidePlank {
+  0%, 15% { transform: rotate(0deg); }
+  30%, 70% { transform: rotate(-20deg); }
+  85%, 100% { transform: rotate(0deg); }
+}
+
+.bd-arm {
+  animation: birdDogArm 5s ease-in-out infinite;
+}
+
+@keyframes birdDogArm {
+  0%, 100% { transform: rotate(0deg); }
+  30%, 70% { transform: rotate(-15deg); }
+}
+
+.bd-leg {
+  animation: birdDogLeg 5s ease-in-out infinite;
+}
+
+@keyframes birdDogLeg {
+  0%, 100% { transform: rotate(0deg); }
+  30%, 70% { transform: rotate(10deg); }
+}
+
+.db-arm {
+  animation: deadBugArm 4s ease-in-out infinite;
+}
+
+@keyframes deadBugArm {
+  0%, 100% { transform: rotate(0deg); }
+  30%, 70% { transform: rotate(25deg); }
+}
+
+.db-leg {
+  animation: deadBugLeg 4s ease-in-out infinite;
+}
+
+@keyframes deadBugLeg {
+  0%, 100% { transform: rotate(0deg); }
+  30%, 70% { transform: rotate(30deg); }
+}
+
+.gb-hip {
+  animation: gluteBridge 4s ease-in-out infinite;
+}
+
+@keyframes gluteBridge {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(-12deg); }
+}
+
+.cc-spine {
+  animation: catCow 5s ease-in-out infinite;
+}
+
+@keyframes catCow {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-8px); }
+  75% { transform: translateY(6px); }
+}
+
+.hs-leg {
+  animation: hamstringLift 5s ease-in-out infinite;
+}
+
+@keyframes hamstringLift {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(-15deg); }
+}
+
+/* Phase III Animations */
+.st-leg {
+  animation: sciaticTension 5s ease-in-out infinite;
+}
+
+@keyframes sciaticTension {
+  0%, 100% { transform: rotate(0deg); }
+  30%, 70% { transform: rotate(-35deg); }
+}
+
+.sss-upper {
+  animation: slumpFlex 5s ease-in-out infinite;
+}
+
+@keyframes slumpFlex {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(15deg); }
+}
+
+.sss-shin {
+  animation: slumpExtend 5s ease-in-out infinite;
+}
+
+@keyframes slumpExtend {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(-30deg); }
+}
+
+.hfs-upper {
+  animation: hipFlexorLean 5s ease-in-out infinite;
+}
+
+@keyframes hipFlexorLean {
+  0%, 100% { transform: translateX(0); }
+  35%, 65% { transform: translateX(-8px); }
+}
+
+.seo-upper {
+  animation: standExtOver 4s ease-in-out infinite;
+}
+
+@keyframes standExtOver {
+  0%, 100% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(-25deg); }
+}
+
+.cp-breathe {
+  animation: childBreath 4s ease-in-out infinite;
+}
+
+@keyframes childBreath {
+  0%, 100% { r: 5; opacity: 0.2; }
+  50% { r: 9; opacity: 0.4; }
+}
+
+/* Phase IV Animations */
+.dbd-arm {
+  animation: dynBDArm 4s ease-in-out infinite;
+}
+
+@keyframes dynBDArm {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-20deg); }
+  50% { transform: rotate(15deg); } /* touch under */
+  75% { transform: rotate(-20deg); }
+}
+
+.dbd-leg {
+  animation: dynBDLeg 4s ease-in-out infinite;
+}
+
+@keyframes dynBDLeg {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(15deg); }
+}
+
+/* ── Reduced Motion ──────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .physio-anim * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .exercise-breathing {
+    animation: none;
+  }
+}
+
+/* ── Coach Message ───────────────────────────────────────── */
+
+.physio-coach-msg {
+  background: linear-gradient(135deg, #EEF2FF, #F5F3FF);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-left: 4px solid #4F46E5;
+}
+
+[data-theme="dark"] .physio-coach-msg {
+  background: linear-gradient(135deg, #1E1B30, #2D2640);
+}
+
+.physio-coach-msg p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text, #111827);
+  margin: 0;
+}
+
+.physio-coach-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #4F46E5;
+  margin-bottom: 4px;
+}
+
+/* ── Science Reference ───────────────────────────────────── */
+
+.exercise-science {
+  font-size: 11px;
+  color: var(--text-secondary, #6B7280);
+  font-style: italic;
+  padding-top: 8px;
+  border-top: 1px solid var(--border, #E5E7EB);
+  margin-top: 10px;
+}
+
+/* ── Advance Phase Modal ─────────────────────────────────── */
+
+.phase-advance-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 20px;
+}
+
+.phase-advance-content {
+  background: var(--card-bg, #fff);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+  max-width: 340px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.phase-advance-emoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.phase-advance-title {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text, #111827);
+  margin-bottom: 8px;
+}
+
+.phase-advance-desc {
+  font-size: 14px;
+  color: var(--text-secondary, #6B7280);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
